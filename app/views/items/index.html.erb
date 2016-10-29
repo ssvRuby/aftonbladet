@@ -1,0 +1,27 @@
+<h1>Список</h1>
+<table>
+  <thead>
+  <tr>
+    <th width="100" align="left"> Имя</th>
+    <th width="150" align="left"> Описание</th>
+    <th width="50" align="left"> Вес</th>
+  </tr>
+  </thead>
+  <% @items.each do |i| %>
+      <tbody>
+      <tr>
+        <th align="left"><%= i.name %></th>
+        <th align="left"><%= i.description %></th>
+        <th align="left"><%= i.weight %></th>
+        <td><%= link_to 'Показать', item_path(i) %></td>
+        <td><%= link_to 'Редактировать', edit_item_path(i) %></td>
+        <td><%= link_to 'Удалить', i, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
+      </tr>
+      </tbody>
+      <br>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to 'Добавить', new_item_path %>
+</p>

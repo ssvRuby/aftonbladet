@@ -3,7 +3,7 @@ class NewTableItems < ActiveRecord::Migration[5.0]
     create_table :items do |t|
       t.string :name
       t.string :description
-      t.number :weight
+      t.integer :weight
 
       t.timestamp
     end
