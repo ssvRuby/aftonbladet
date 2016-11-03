@@ -1,5 +1,7 @@
-<h>Новый элемент</h>
+<h4>Создание элемента</h4>
 
 <%= render 'form', item: @item %>
 
-<%= link_to 'Назад', items_path %>
+<div class="col-md-12">
+<%= link_to 'К списку элементов', items_path, class: 'btn btn-link'%>
+</div>

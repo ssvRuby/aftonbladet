@@ -1,0 +1,23 @@
+
+https://guarded-springs-51106.herokuapp.com
+https://git.heroku.com/guarded-springs-51106.git
+
+
+eroku create
+git config --list | grep heroku
+git push heroku master
+
+migrate-your-database:
+heroku run rake db:migrate
+or
+heroku run rails db:schema:load
+
+
+
+
+Branches pushed to Heroku other than master will be ignored by this command.
+If you’re working out of another branch locally, you can either merge to
+master before pushing, or specify that you want to push your local branch
+to a remote master. To push a branch other than master, use this syntax:
+
+$ git push heroku Deploy:master

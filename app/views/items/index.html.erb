@@ -1,5 +1,6 @@
-<h1>Список</h1>
-<table>
+<h2>Список</h2>
+
+<table class="table table-striped">
   <thead>
   <tr>
     <th width="100" align="left"> Имя</th>
@@ -13,9 +14,9 @@
         <th align="left"><%= i.name %></th>
         <th align="left"><%= i.description %></th>
         <th align="left"><%= i.weight %></th>
-        <td><%= link_to 'Показать', item_path(i) %></td>
-        <td><%= link_to 'Редактировать', edit_item_path(i) %></td>
-        <td><%= link_to 'Удалить', i, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
+        <td><%= link_to 'Показать', item_path(i), class: 'btn btn-link' %></td>
+        <td><%= link_to 'Редактировать', edit_item_path(i), class: 'btn btn-link' %></td>
+        <td><%= link_to 'Удалить', i, method: :delete, data: {confirm: 'Вы уверены?'}, class: 'btn btn-link' %></td>
       </tr>
       </tbody>
       <br>
@@ -23,5 +24,5 @@
 </table>
 
 <p>
-  <%= link_to 'Добавить', new_item_path %>
+  <%= link_to 'Добавить', new_item_path, class: 'btn btn-link' %>
 </p>

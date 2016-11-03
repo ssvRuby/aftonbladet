@@ -1,21 +1,6 @@
-<h1>Просмотр</h1>
+<%= render 'item', item: @item%>
 
-<table>
-  <tr>
-    <th width="150" ; align="left">Имя</th>
-    <td><%= @item.name %></td>
-  </tr>
-  <tr>
-    <th width="150" ; align="left">Описание</th>
-    <td> <%= @item.description %></td>
-  </tr>
-  <tr>
-    <th width="150" ; align="left">Вес</th>
-    <td><%= @item.weight %></td>
-  </tr>
-</table>
-
-<p>
+<div class="col-md-12">
   <%= link_to 'Редактировать', edit_item_path(@item) %> |
-  <%= link_to 'Назад', items_path %>
-</p>
+  <%= link_to 'К списку', items_path %>
+</div>
